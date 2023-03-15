@@ -94,4 +94,21 @@ select {
 
 * {
   font-family: var(--ff-primary-100);
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: var(--clr-neutral-300);
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  width: 120px;
+  height: 35px;
 }
