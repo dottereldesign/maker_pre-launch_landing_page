@@ -504,6 +504,7 @@ main p {
 
   .feature article {
     display: grid;
+    grid-template-columns: -webkit-max-content 1fr;
     grid-template-columns: max-content 1fr;
     flex-direction: column;
     align-items: center;
@@ -572,6 +573,7 @@ main p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    -moz-column-gap: 32px;
     column-gap: 32px;
     width: min(100%, 1110px);
     margin: 96px auto 0 auto;
@@ -772,6 +774,8 @@ main p {
   position: absolute;
   left: 0;
   margin: 8px 0 0 24px;
+  -webkit-filter: invert(65%) sepia(98%) saturate(293%) hue-rotate(127deg)
+    brightness(99%) contrast(97%);
   filter: invert(65%) sepia(98%) saturate(293%) hue-rotate(127deg)
     brightness(99%) contrast(97%);
 }
@@ -893,6 +897,8 @@ main p {
     position: absolute;
     left: 0;
     margin: 8px 0 0 24px;
+    -webkit-filter: invert(65%) sepia(98%) saturate(293%) hue-rotate(127deg)
+      brightness(99%) contrast(97%);
     filter: invert(65%) sepia(98%) saturate(293%) hue-rotate(127deg)
       brightness(99%) contrast(97%);
   }
