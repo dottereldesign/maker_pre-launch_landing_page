@@ -403,18 +403,44 @@ header img {
 
 /* card - section */
 .package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0 16px;
-  margin: 72px 0 0 0;
+
+  margin: 72px auto 0 auto;
 }
 
 .card {
   border-radius: 8px;
   padding: 56px 24px 16px 24px;
+  width: min(100%, 445px);
 }
 
 .card_1 {
   color: var(--clr-neutral-100);
   background-color: var(--clr-primary-200);
+  position: relative;
+}
+
+.card_1::before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: -23px;
+  left: 24px;
+  background-image: url("images/icon-free.svg");
+}
+
+.card_2::before {
+  content: "";
+  position: absolute;
+  width: 51px;
+  height: 65px;
+  top: -34px;
+  left: 24px;
+  background-image: url("images/icon-paid.svg");
 }
 
 .card h3 {
@@ -445,21 +471,54 @@ header img {
 .card li {
   list-style: none;
   font-weight: var(--fw-semi-bold);
+  margin-left: 24px;
 }
 
 .card li:not(:first-child) {
   margin-top: 8px;
 }
 
+.card_1 li::before {
+  content: "";
+  background-image: url("images/icon-check.svg");
+  width: 11.36px;
+  height: 8.1px;
+  position: absolute;
+  left: 0;
+  margin: 8px 0 0 24px;
+  filter: invert(65%) sepia(98%) saturate(293%) hue-rotate(127deg)
+    brightness(99%) contrast(97%);
+}
+
+.card_2 li::before {
+  content: "";
+  background-image: url("images/icon-check.svg");
+  width: 11.36px;
+  height: 8.1px;
+  position: absolute;
+  left: 0;
+  margin: 8px 0 0 24px;
+}
+
 .card_2 {
   background-color: var(--clr-primary-100);
   margin-top: 64px;
+  position: relative;
 }
 
 .card_price {
   display: flex;
   align-items: center;
   margin-top: 24px;
+}
+
+.card_price p {
+  padding: 0;
+  margin: 0;
+}
+
+.card_price span {
+  padding: 0 4px;
 }
 
 /* footer */
